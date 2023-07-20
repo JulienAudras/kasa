@@ -1,6 +1,11 @@
+import Header from "../components/Header.jsx"
+
+
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 

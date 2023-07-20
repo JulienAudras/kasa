@@ -1,5 +1,12 @@
+import Header from "../components/Header.jsx"
+
+
 function Error() {
-  return <div>Error</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
 
 export default Error;
