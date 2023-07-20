@@ -8,7 +8,7 @@ html{
   width: 100%;
   overflow-x: hidden;
 }
-body {
+body,h1, h2, h3, p, ul, ol, li {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -53,7 +53,6 @@ a, a:visited, a:hover, a:focus {
     display: flex;
     gap: 57px;
     justify-content: flex-start;
-    // flex-wrap: nowrap;
     @media (max-width: 768px){
       gap:26px;
     } 
