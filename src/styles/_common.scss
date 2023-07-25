@@ -98,7 +98,7 @@ a, a:visited, a:hover, a:focus {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @media (max-width: 375px){
+  @media (max-width: 376px){
     width: 100%;
   }
 
@@ -129,4 +129,90 @@ a, a:visited, a:hover, a:focus {
   }
 }
 
+.accordeon-item{
+  &__title{
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    border-radius: 5px;
+    background-color: $main-color;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 376px){
+      height: 30px;
+    }
+
+    &--text{
+      color: white;
+      font-family: Montserrat;
+      margin-left: 15px;
+    }
+
+    &--arrow{
+      margin-right: 20px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+      display: block;
+      @media (max-width: 376px){
+        display:none
+      }
+
+      &.open{
+        transform: rotate(-180deg);
+      }
+    }
+
+    &--arrow_mobile{
+      margin-right: 10px;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+      display: none;
+      @media (max-width: 376px){
+        display:block;
+      }
+
+      &.open{
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+  
+    &__content{
+      background-color: #F6F6F6;
+      border-radius: 0px 0px 10px 10px;
+      transform: translateY(-5px);
+      overflow: hidden;
+      // display: grid;
+      // grid-template-rows: 0fr;
+      // max-height: 0;
+      // transition-duration: 0.5s;
+      // transition-property: max-height;
+      
+      
+      &--text{
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        color: $main-color;
+        @media (max-width: 376px){
+          font-size: 11px;
+        }    
+      }
+    
+    //   &.content-open{
+    //    max-height: 500px;
+    //    transition-duration: 0.5s;
+    //    transition-property: max-height;
+    // }
+  }
+    
+
+
+
+    
+
+}
 
