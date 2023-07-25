@@ -18,6 +18,7 @@ body,h1, h2, h3, p, ul, ol, li {
   overflow: hidden;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -26,6 +27,14 @@ code {
 a, a:visited, a:hover, a:focus {
   color: $main-color;
   text-decoration: none;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .header {
@@ -185,12 +194,7 @@ a, a:visited, a:hover, a:focus {
       border-radius: 0px 0px 10px 10px;
       transform: translateY(-5px);
       overflow: hidden;
-      // display: grid;
-      // grid-template-rows: 0fr;
-      // max-height: 0;
-      // transition-duration: 0.5s;
-      // transition-property: max-height;
-      
+     
       
       &--text{
         font-family: Montserrat;
@@ -201,18 +205,33 @@ a, a:visited, a:hover, a:focus {
           font-size: 11px;
         }    
       }
-    
-    //   &.content-open{
-    //    max-height: 500px;
-    //    transition-duration: 0.5s;
-    //    transition-property: max-height;
-    // }
   }
-    
-
-
-
-    
-
 }
 
+.bannerContainer{
+  width: 100%;
+  height:223px;
+  background-color: black;
+  border-radius: 25px;
+  margin-top: 38px;
+  position: relative;
+  
+  &__photo{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      border-radius: 25px;
+      opacity:0.7;
+      object-position: 50% 51%;
+  }
+  &__title{
+    font-family: Montserrat;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Couleur du texte, remplacez-la par la couleur souhaitée */
+  }
+}

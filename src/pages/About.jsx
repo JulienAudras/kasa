@@ -2,6 +2,7 @@ import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import AccordeonItem from "../components/AccordeonItem.jsx";
 import MountainPhoto from "../assets/Mountain.jpeg";
+import BannerImage from "../components/BannerImage.jsx";
 
 const aboutDatas=
 [
@@ -29,13 +30,7 @@ function About() {
     <div>
       <Header />
       <div className="about-container">
-        <div className="about-photo">
-          <img 
-            className="about-photo__image"
-            src={MountainPhoto}
-            alt="paysage montagneu"
-            />
-        </div>
+        <BannerImage bannerPhoto = {MountainPhoto}/>
         <div className="accordeons-container">
         {aboutDatas.map((item, index) => (
           <AccordeonItem
