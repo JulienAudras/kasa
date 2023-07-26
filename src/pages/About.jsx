@@ -29,7 +29,7 @@ function About() {
   return (
     <div>
       <Header />
-      <div className="about-container">
+      <div className="mainContainer">
         <BannerImage bannerPhoto = {MountainPhoto}/>
         <div className="accordeons-container">
         {aboutDatas.map((item, index) => (
