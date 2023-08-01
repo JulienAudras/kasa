@@ -28,9 +28,9 @@
     .accordeon-item{
         &__title{
             &--text{
-              font-size: 24px;
+              font-size: 2.4rem;
               @media (max-width: 401px){
-                font-size: 13px;
+                font-size: 1.3rem;
               }
             
             }

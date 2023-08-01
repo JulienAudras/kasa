@@ -11,13 +11,12 @@ function Home() {
 
   console.log(data)
   return <div>
-    <Header />
     <div className = "mainContainer">
       <BannerImage bannerPhoto = {Coast} title = "Chez vous, partout et ailleurs"/> 
       
       <div className = "cardsContainer">
         {data.map((item, index) => (
-          <Link to={`/house/${item.id}`} key={item.id}>
+          <Link to={`/house/${item.id}`} key={item.id} className="cardsContainer__link">
             <CardTemplate
               key={index}
               id={item.id}
@@ -28,7 +27,6 @@ function Home() {
         ))}
       </div>
     </div>
-    <Footer />
   </div>
 }
 

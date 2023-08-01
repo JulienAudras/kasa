@@ -1,8 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import data from "../datas/logements.json"
-import Header from './Header';
-import Footer from './Footer';
 import AccordeonItem from "./AccordeonItem"
 import Slider from './Slider';
 
@@ -31,9 +29,11 @@ function HousePage() {
   }
   
   const formattedEquipments = houseData.equipments.join("\n");
-    return (
+    
+  return (
+
+     houseData && (
     <div>
-      <Header />
       <div className="houseContainer">
         <Slider slides={houseData.pictures} />
         <div className="houseContainer__topSection">
@@ -76,7 +76,18 @@ function HousePage() {
               <i key={index} className="fa-solid fa-star houseContainer__midSection--rightSide--greyStar">
               </i>
             ))}
-              
+            <div className="houseContainer__midSection--rightSide--avatar">
+              <p className="houseContainer__midSection--rightSide--avatar--name">
+                {firstName}<br />{surName}
+              </p>
+              <div className="houseContainer__midSection--rightSide--avatar--avatar">
+                <img 
+                className="houseContainer__midSection--rightSide--avatar--avatar--photo"
+                src={houseData.host.picture}
+                alt="avatar de l'hôte"
+                />
+              </div> 
+          </div> 
           </div>
         </div>
         <div className="houseContainer__bottomSection">
@@ -94,8 +105,8 @@ function HousePage() {
             />
         </div>
       </div>
-      <Footer />
     </div>
+     )
   )
 }
 

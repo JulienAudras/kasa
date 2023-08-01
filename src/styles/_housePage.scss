@@ -19,15 +19,19 @@
         &--leftSide{
             justify-content: flex-start;
             width: 50%;
+            @media (max-width: 401px){
+                width:100%
+            }
             
             &--name{
-            font-family: Montserrat;
-            font-size: 36px;
-            font-weight: 500;
-            color: #FF6060;
+            font-size: 3.6rem;
+            color: $main-color;
             white-space: normal;
             word-wrap: break-word;
             hyphens: auto;
+            @media (max-width: 401px){
+                font-size: 1.8rem;
+                }
             } 
         }
 
@@ -37,13 +41,14 @@
             align-items: flex-end;
             width: 50%;
             gap:10px;
+            @media (max-width: 401px){
+                display: none;
+                }
             
             &--name{        
-                font-family: Montserrat;
-                font-size: 18px;
-                font-weight: 500;
+                font-size: 1.8rem;
                 text-align: right;
-                color: #FF6060;
+                color: $main-color;
                 align-self: center;
             }
 
@@ -69,17 +74,23 @@
         justify-content: flex-start;
         
         &--location{
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 1.8rem;
         width: 50%;
-        color: #FF6060;
+        color: $main-color;
+        @media (max-width: 401px){
+            font-size: 1.4rem;
+            }
         }
     }
 
     &__midSection{
         display: flex;
         width: 100%;
+        @media (max-width: 401px){
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            flex-direction: column;
+            }
 
         &--leftSide{
             justify-content: flex-start;
@@ -96,16 +107,21 @@
                     min-width:95px;
                     height:25px;
                     border-radius: 20px;
-                    background-color: #FF6060;
-                    font-family: Montserrat;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: white;
+                    background-color: $main-color;
+                    font-size: 1.4rem;
+                    color: $third-color;
                     margin-right: 10px;
                     justify-content: center;
                     align-items: center;
                     padding-left: 10px;
                     padding-right: 10px;
+                    @media (max-width: 401px){
+                        font-size: 1rem;
+                        max-width: 84px;
+                        height: 18px;
+                        border-radius: 5px;
+                        padding: 0px;
+                        }
                 }
             }
         }
@@ -119,14 +135,45 @@
                 font-size: 24px
             }
             &--redStar{
-                color:#FF6060;
+                color:$main-color;
             }
             &--greyStar{
                 color:#E3E3E3
             }
+            &--avatar{
+                display: flex;
+                display: none;
+                flex-direction: row;
+                &--name{        
+                    font-size: 1.2rem;
+                    text-align: right;
+                    color: $main-color;
+                    align-self: center;
+                }
+                &--avatar{
+                width: 32px;
+                height: 32px;
+                border-radius:50px;
+                align-self: center;
+                
+                    &--photo{
+                        width: 32px;
+                        height: 32px;
+                        border-radius:50px;
+                        object-fit: cover;
+                    }
+                }
+        @media (max-width: 401px){
+            display: block;
+        }
             
         }
+        @media (max-width: 401px){
+            display: flex;
+            justify-content: space-between;
+        }
     }
+}
 
     &__bottomSection{
         margin-top: 24px;
@@ -135,9 +182,21 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        
         &--accordeon-item-house{
             width: 47%;
+            .accordeon-item__title{
+                &--text{
+                  font-size: 2.4rem;
+                  @media (max-width: 401px){
+                    font-size: 1.3rem;
+                  }
+                
+                }
+            }
         }
+        
+                
         // .description{
         //     // jus: flex-start;
         // }
@@ -147,5 +206,6 @@
             
         }
     }
+    
 }
 

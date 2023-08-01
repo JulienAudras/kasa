@@ -28,7 +28,6 @@ const aboutDatas=
 function About() {
   return (
     <div>
-      <Header />
       <div className="mainContainer">
         <BannerImage bannerPhoto = {MountainPhoto}/>
         <div className="accordeons-container">
@@ -42,7 +41,6 @@ function About() {
         ))}
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

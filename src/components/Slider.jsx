@@ -40,12 +40,13 @@ function Slider({ slides }) {
             onClick={nextSlide}
             /> 
             <p className="slider__slide--currentlSlide">
-                {currentIndex + 1} / {slides.length}
+                {currentIndex + 1}/{slides.length}
             </p>
           </div>
         
       </div>
     );
+    
   }
   
 
