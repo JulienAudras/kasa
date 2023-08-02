@@ -1,6 +1,4 @@
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import AccordeonItem from "../components/AccordeonItem.jsx";
+import Collapse from "../components/Collapse.jsx";
 import MountainPhoto from "../assets/Mountain.jpeg";
 import BannerImage from "../components/BannerImage.jsx";
 
@@ -32,7 +30,7 @@ function About() {
         <BannerImage bannerPhoto = {MountainPhoto}/>
         <div className="accordeons-container">
         {aboutDatas.map((item, index) => (
-          <AccordeonItem
+          <Collapse
             key={index}
             title={item.title}
             content={item.content}

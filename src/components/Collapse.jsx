@@ -2,11 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import arrow from "../assets/arrow_up-24px.png";
 import arrow_mobile from "../assets/arrow_up_mobile.png"
 
-const AccordeonItem = ({ title, content, className }) => {
+const Collapse = ({ title, content, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
-  const toggleAccordeon = () => {
+  const toggleCollapse = () => {
     setIsOpen(!isOpen);
   }
 
@@ -24,13 +24,13 @@ const AccordeonItem = ({ title, content, className }) => {
           className={`accordeon-item__title--arrow ${isOpen ? "open" : "closed"}`}
           src={arrow}
           alt="Flèche"
-          onClick={toggleAccordeon}
+          onClick={toggleCollapse}
         />
         <img
           className={`accordeon-item__title--arrow_mobile ${isOpen ? "open" : "closed"}`}
           src={arrow_mobile}
           alt="Flèche"
-          onClick={toggleAccordeon}
+          onClick={toggleCollapse}
         />
       </div>
       <div
@@ -49,4 +49,4 @@ const AccordeonItem = ({ title, content, className }) => {
   );
 };
 
-export default AccordeonItem;
+export default Collapse;

@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom"
-import Header from "../components/Header.jsx"
-import Footer from "../components/Footer.jsx"
 import BannerImage from "../components/BannerImage.jsx"
 import Coast from "../assets/Coast.jpeg"
 import CardTemplate from "../components/CardTemplate.jsx"

@@ -20,8 +20,6 @@ html{
 body,h1, h2, h3, p, ul, ol, li {
   margin: 0;
   padding: 0;
-  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -53,10 +51,13 @@ a, a:visited, a:hover, a:focus {
   align-items: center;
   justify-content: center;
   margin: auto;
-  @media (max-width: 401px){
+  @media (max-width: 768px){
       width: 89.6%;
     }
 }
+
+
+ // Header
 
 .header {
   display: flex;
@@ -120,6 +121,9 @@ a, a:visited, a:hover, a:focus {
   } 
 }
 
+
+//Footer
+
 .footer{
   background-color: black;
   width: 100%;
@@ -127,7 +131,7 @@ a, a:visited, a:hover, a:focus {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @media (max-width: 401px){
+  @media (max-width: 768px){
     width: 100%;
   }
 
@@ -157,18 +161,20 @@ a, a:visited, a:hover, a:focus {
   }
 }
 
+
+//Collapse 
+
 .accordeon-item{
   &__title{
     display: flex;
     flex-direction: row;
     height: 52px;
-    border-radius: 5px;
     background-color: $main-color;
     align-items: center;
     justify-content: space-between;
     position: relative;
     z-index: 2;
-    @media (max-width: 401px){
+    @media (max-width: 768px){
       height: 30px;
     }
 
@@ -182,7 +188,7 @@ a, a:visited, a:hover, a:focus {
       cursor: pointer;
       transition: transform 0.5s ease;
       display: block;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         display:none
       }
 
@@ -196,7 +202,7 @@ a, a:visited, a:hover, a:focus {
       cursor: pointer;
       transition: transform 0.5s ease;
       display: none;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         display:block;
       }
 
@@ -219,12 +225,15 @@ a, a:visited, a:hover, a:focus {
         font-weight: 400;
         color: $main-color;
         padding: 20px;
-        @media (max-width: 401px){
+        @media (max-width: 768px){
           font-size: 1.1rem;
         }    
       }
   }
 }
+
+
+//Banner
 
 .bannerContainer{
   width: 100%;
@@ -250,7 +259,7 @@ a, a:visited, a:hover, a:focus {
     transform: translate(-50%, -50%);
     text-align: center;
     color: $third-color;
-    @media (max-width: 590px){
+    @media (max-width: 768px){
       font-size: 2.3rem;
       left: 38%;
       text-align: left;      
@@ -258,11 +267,14 @@ a, a:visited, a:hover, a:focus {
   }
 }
 
+
+//Gallery
+
 .slider{
   width:100%;
   min-width: 100%;
   height: 415px;
-  @media (max-width: 401px){
+  @media (max-width: 768px){
     height:255px;    
   } 
  
@@ -271,16 +283,17 @@ a, a:visited, a:hover, a:focus {
     height: 415px;
     position: relative;
     display: flex;
-    @media (max-width: 401px){
+    @media (max-width: 768px){
+      min-width: 100%;
       height:255px;    
     } 
 
     &--img{
-      width: 100%;
+      min-width: 100%;
       height: 415px;
       object-fit: cover;
       border-radius: 25px;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         height:255px;    
       } 
     }
@@ -289,8 +302,18 @@ a, a:visited, a:hover, a:focus {
       position: absolute;
       left: 23px;
       top: 167.9px;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         display: none;;    
+      } 
+    }
+
+    &--leftArrow--mobile{
+      position: absolute;
+      left: 5px;
+      top: 115px;
+      display: none;
+      @media (max-width: 768px){
+        display: block;    
       } 
     }
 
@@ -298,8 +321,18 @@ a, a:visited, a:hover, a:focus {
       position: absolute;
       right: 23px;
       top: 167.9px;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         display: none;;    
+      } 
+    }
+
+    &--rightArrow---mobile{
+      position: absolute;
+      right: 5px;
+      top: 115px;
+      display: none;
+      @media (max-width: 768px){
+        display: block;    
       } 
     }
 
@@ -309,10 +342,94 @@ a, a:visited, a:hover, a:focus {
       left: 49%;
       color: $third-color;
       font-size: 1.8rem; 
-      // letter-spacing: -0.5px;
-      @media (max-width: 401px){
+      @media (max-width: 768px){
         display: none;    
       } 
     }
   }
 }
+
+
+//Avatar
+  
+.avatar{
+  display: flex;
+  gap: 10px;
+
+  &__name{        
+      font-size: 1.8rem;
+      text-align: right;
+      color: $main-color;
+      align-self: center;
+      @media (max-width: 768px){
+        font-size: 1.2rem;
+      }
+  }
+
+  &__photo{
+  width: 64px;
+  height: 64px;
+  border-radius:50px;
+  object-fit: cover;
+  @media (max-width: 768px){
+    width: 32px;
+    height: 32px;
+  }
+  }
+  
+}
+
+
+//Tags
+
+.tags{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  &__tag{
+      display: flex;
+      flex-direction: row;
+      min-width:95px;
+      height:25px;
+      border-radius: 20px;
+      background-color: $main-color;
+      font-size: 1.4rem;
+      color: $third-color;
+      margin-right: 10px;
+      justify-content: center;
+      align-items: center;
+      padding-left: 25px;
+      padding-right: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      @media (max-width: 768px){
+          font-size: 1rem;
+          max-width: 84px;
+          height: 18px;
+          border-radius: 5px;
+          padding: 0px;
+          }
+  }
+}
+
+
+//Rating
+
+.fa-star{
+  font-size: 2.4rem;
+  @media (max-width: 768px){
+    font-size: 1.3rem;
+  }
+}
+.rating{
+    &__redStars{
+    color:$main-color
+  }
+  
+    &__greyStars{
+    color:#E3E3E3
+  }
+}
+

@@ -1,9 +1,11 @@
 import React, { useState} from "react"
 import arrow_left from "../assets/arrow_left.png"
 import arrow_right from "../assets/arrow_right.png"
+import arrow_left_mobile from "../assets/arrow_left_mobile.png"
+import arrow_right_mobile from "../assets/arrow_right_mobile.png"
 
 
-function Slider({ slides }) {
+function Gallery({ slides }) {
     
     const [currentIndex, setCurrentIndex] = useState(0);
     
@@ -34,11 +36,23 @@ function Slider({ slides }) {
             onClick={prevSlide}
             />
             <img 
+            src = {arrow_left_mobile} 
+            alt="slide précédent"
+            className="slider__slide--leftArrow--mobile"
+            onClick={prevSlide}
+            />
+            <img 
             src = {arrow_right} 
             alt="slide suivant"
             className="slider__slide--rightArrow"
             onClick={nextSlide}
-            /> 
+            />
+            <img 
+            src = {arrow_right_mobile} 
+            alt="slide suivant"
+            className="slider__slide--rightArrow---mobile"
+            onClick={nextSlide}
+            />  
             <p className="slider__slide--currentlSlide">
                 {currentIndex + 1}/{slides.length}
             </p>
@@ -50,4 +64,4 @@ function Slider({ slides }) {
   }
   
 
-export default Slider
+export default Gallery
