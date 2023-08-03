@@ -1,7 +1,6 @@
 
 function Ratingstars({rating}) {
 
-
   const ratingArray = [];
   for (let i = 1; i <= rating; i++) {
     ratingArray.push(i);
@@ -13,9 +12,7 @@ function Ratingstars({rating}) {
   for (let i = 1; i <= greyStarsNumber; i++){
     greyStarsArray.push(i)
   }
-  console.log(rating)
-  console.log(greyStarsArray)
-
+  
   return (
     <div className="rating">
       {ratingArray.map((index) => (

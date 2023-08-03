@@ -4,14 +4,10 @@ import Coast from "../assets/Coast.jpeg"
 import CardTemplate from "../components/CardTemplate.jsx"
 import data from "../datas/logements.json"
 
-
 function Home() {
-
-  console.log(data)
   return <div>
     <div className = "mainContainer">
       <BannerImage bannerPhoto = {Coast} title = "Chez vous, partout et ailleurs"/> 
-      
       <div className = "cardsContainer">
         {data.map((item, index) => (
           <Link to={`/house/${item.id}`} key={item.id} className="cardsContainer__link">

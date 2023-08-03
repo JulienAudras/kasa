@@ -1,5 +1,3 @@
-import React from 'react'
-
 function CardTemplate(props) {
   return (
     <div className = "card">
