@@ -1,8 +1,8 @@
 function BannerImage(props) {
   return (
-    <div className="bannerContainer">
+    <div className={props.class}>
         <img 
-            className="bannerContainer__photo"
+            className= {props.photoClass}
             src={props.bannerPhoto}
             alt="Bannière du site"
         />

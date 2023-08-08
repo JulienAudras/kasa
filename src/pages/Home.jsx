@@ -7,7 +7,7 @@ import data from "../datas/logements.json"
 function Home() {
   return <div>
     <div className = "mainContainer">
-      <BannerImage bannerPhoto = {Coast} title = "Chez vous, partout et ailleurs"/> 
+      <BannerImage class={"bannerContainer"} bannerPhoto = {Coast} photoClass={"bannerContainer__photo"} title = "Chez vous, partout et ailleurs"/> 
       <div className = "cardsContainer">
         {data.map((item, index) => (
           <Link to={`/house/${item.id}`} key={item.id} className="cardsContainer__link">

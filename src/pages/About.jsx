@@ -27,7 +27,7 @@ function About() {
   return (
     <div>
       <div className="mainContainer">
-        <BannerImage bannerPhoto = {MountainPhoto}/>
+        <BannerImage class = {"bannerContainerAbout"} bannerPhoto = {MountainPhoto} photoClass={"bannerContainerAbout__photo"} className="aboutBanner"/>
         <div className="accordeons-container">
         {aboutDatas.map((item, index) => (
           <Collapse
