@@ -409,7 +409,10 @@ a, a:visited, a:hover, a:focus {
           max-width: 84px;
           height: 18px;
           border-radius: 5px;
-          padding: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
           }
   }
 }

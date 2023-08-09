@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import arrow from "../assets/arrow_up-24px.png";
 import arrow_mobile from "../assets/arrow_up_mobile.png"
 
-const Collapse = ({ title, content, className }) => {
+const Collapse = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -17,9 +17,9 @@ const Collapse = ({ title, content, className }) => {
 
 
   return (
-    <div className={`accordeon-item ${className}`}>
+    <div className={`accordeon-item ${props.className}`}>
       <div className="accordeon-item__title">
-        <span className="accordeon-item__title--text">{title}</span>
+        <span className="accordeon-item__title--text">{props.title}</span>
         <img
           className={`accordeon-item__title--arrow ${isOpen ? "open" : "closed"}`}
           src={arrow}
@@ -42,7 +42,7 @@ const Collapse = ({ title, content, className }) => {
         }}
       >
         <div className="accordeon-item__content--text">
-          {content}
+          {props.content}
         </div>
         </div>
     </div>
